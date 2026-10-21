@@ -15,6 +15,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <script>try { if (localStorage.getItem('theme') === 'light') document.documentElement.dataset.theme = 'light'; } catch (e) {}</script>
 </head>
 <body>
 
@@ -31,9 +32,19 @@
   <nav class="navbar" id="navbar">
     <div class="container nav-inner">
       <a class="brand" href="#home-section">harswith<span>.</span>buchireddy</a>
+      <div class="nav-right">
+      <button class="theme-switch" id="themeSwitch" role="switch" aria-checked="false" aria-label="Light mode">
+        <span class="ts-track"><span class="ts-thumb">
+          <svg class="ts-moon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M21 14.5A8.5 8.5 0 0 1 9.5 3a8.5 8.5 0 1 0 11.5 11.5z"/></svg>
+          <svg class="ts-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="5" fill="currentColor"/><g stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 1v3M12 20v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M1 12h3M20 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></g></svg>
+        </span></span>
+        <span class="ts-label" id="themeLabel">Light mode</span>
+        <span class="ts-hint" id="themeHint">Prefer softer colors? Flip this switch for light mode.</span>
+      </button>
       <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
         <span class="bars"><i></i><i></i><i></i></span> Menu
       </button>
+      </div>
       <ul class="nav-links" id="navLinks">
         <li><a href="#home-section" class="active">Home</a></li>
         <li><a href="#about-section">About</a></li>

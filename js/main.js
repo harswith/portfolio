@@ -7,6 +7,36 @@
 
   $('#year').textContent = new Date().getFullYear();
 
+  // Light / dark theme switch
+  const root = document.documentElement;
+  const themeSwitch = $('#themeSwitch');
+  const themeHint = $('#themeHint');
+  const syncTheme = () => {
+    const light = root.dataset.theme === 'light';
+    themeSwitch.setAttribute('aria-checked', light);
+    $('#themeLabel').textContent = light ? 'Dark mode' : 'Light mode';
+    themeHint.textContent = light ? 'Back to the dark side? Flip it again.' : 'Prefer softer colors? Flip this switch for light mode.';
+    $('meta[name="theme-color"]').content = light ? '#f6f8fc' : '#0a0a0c';
+  };
+  themeSwitch.addEventListener('click', () => {
+    root.classList.add('theming');
+    if (root.dataset.theme === 'light') delete root.dataset.theme;
+    else root.dataset.theme = 'light';
+    try { localStorage.setItem('theme', root.dataset.theme || 'dark'); } catch (e) {}
+    syncTheme();
+    themeHint.classList.remove('show');
+    setTimeout(() => root.classList.remove('theming'), 600);
+  });
+  syncTheme();
+  // Show the hint briefly to first-time visitors
+  let seenHint = false;
+  try { seenHint = localStorage.getItem('themeHintSeen') === '1'; } catch (e) {}
+  if (!seenHint) {
+    setTimeout(() => themeHint.classList.add('show'), 2200);
+    setTimeout(() => themeHint.classList.remove('show'), 8500);
+    try { localStorage.setItem('themeHintSeen', '1'); } catch (e) {}
+  }
+
   // Navbar: becomes sticky and slides in after scrolling past the hero top
   const nav = $('#navbar');
   const toTop = $('#toTop');
