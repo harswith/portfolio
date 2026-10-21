@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Harswith Buchireddy</title>
+  <meta name="description" content="Harswith Buchireddy: high school junior building software, apps, and secure systems. Aspiring Computer Science Engineer.">
+  <meta property="og:title" content="Harswith Buchireddy">
+  <meta property="og:description" content="Aspiring Computer Science Engineer. Builder of Triply and TownSquare.">
+  <meta property="og:url" content="https://harswith.com">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#0a0a0c">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Loader -->
+  <div id="loader" class="show">
+    <svg class="circular" width="48" height="48"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"/></svg>
+  </div>
+
+  <!-- Background grid + glow -->
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a class="brand" href="#home-section">Harswith<span>.</span></a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span class="bars"><i></i><i></i><i></i></span> Menu
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home-section" class="active">Home</a></li>
+        <li><a href="#about-section">About</a></li>
+        <li><a href="#resume-section">Experience</a></li>
+        <li><a href="#skills-section">Skills</a></li>
+        <li><a href="#projects-section">Projects</a></li>
+        <li><a href="#awards-section">Awards</a></li>
+        <li><a href="#contact-section">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero slider -->
+  <section id="home-section" class="hero">
+    <div class="slider" id="heroSlider">
+      <div class="slide active">
+        <div class="container slide-inner">
+          <div class="slide-text">
+            <span class="subheading">Hello!</span>
+            <h1 class="mb-4">I'm <span>Harswith Buchireddy</span></h1>
+            <h2>Aspiring Software Engineer</h2>
+            <p class="actions"><a href="#projects-section" class="btn btn-primary">See my work</a> <a href="#contact-section" class="btn btn-outline">Get in touch</a></p>
+          </div>
+          <div class="slide-visual"><div class="orb"><div class="ring r1"></div><div class="ring r2"></div><div class="ring r3"></div><span class="initials">HB</span></div></div>
+        </div>
+      </div>
+      <div class="slide">
+        <div class="container slide-inner">
+          <div class="slide-text">
+            <span class="subheading">Builder · Leader · Mentor</span>
+            <h1 class="mb-4">I build <span>apps</span> that bring people together</h1>
+            <h2>Junior @ Olentangy Berlin High School</h2>
+            <p class="actions"><a href="#about-section" class="btn btn-primary">About me</a> <a href="https://github.com/harswith" target="_blank" rel="noopener" class="btn btn-outline">GitHub</a></p>
+          </div>
+          <div class="slide-visual"><div class="orb alt"><div class="ring r1"></div><div class="ring r2"></div><div class="ring r3"></div><span class="initials mono">&lt;/&gt;</span></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="slider-dots" id="sliderDots"><button class="active" aria-label="Slide 1"></button><button aria-label="Slide 2"></button></div>
+    <a href="#about-section" class="mouse" aria-label="Scroll down"><span class="mouse-wheel"></span></a>
+  </section>
+
+  <!-- About -->
+  <section id="about-section" class="section">
+    <div class="container about-grid">
+      <div class="about-img reveal">
+        <div class="img-frame">
+          <img src="assets/profile.svg" alt="Harswith Buchireddy" id="profileImg">
+        </div>
+      </div>
+      <div class="about-text">
+        <div class="heading-section reveal">
+          <h1 class="big">About</h1>
+          <h2>About Me</h2>
+          <p>I'm a high school student passionate about software engineering and computer science. I've gained hands-on experience through coursework and personal projects, and I'm always excited to learn from real-world development teams. Right now I'm a junior at Olentangy Berlin High School, taking college-level courses through dual enrollment at Columbus State.</p>
+          <ul class="about-info">
+            <li><span>Name:</span> <span>Harswith Buchireddy</span></li>
+            <li><span>Location:</span> <span>Delaware, Ohio</span></li>
+            <li><span>School:</span> <span>Olentangy Berlin HS · Class of 2028</span></li>
+            <li><span>Dual Enrollment:</span> <span>Columbus State Community College</span></li>
+            <li><span>GitHub:</span> <span><a href="https://github.com/harswith" target="_blank" rel="noopener">github.com/harswith</a></span></li>
+          </ul>
+        </div>
+        <div class="counter-wrap reveal">
+          <p><span class="number" data-number="2">0</span> <span>Projects shipped &amp; in progress</span></p>
+          <p><span class="number" data-number="2">0</span> <span>Certifications</span></p>
+          <p><span class="number" data-number="7">0</span> <span>Clubs &amp; organizations</span></p>
+        </div>
+        <p class="reveal"><a href="#contact-section" class="btn btn-primary">Contact me</a> <a href="Harswith_Buchireddy_Resume.pdf" class="btn btn-outline" id="resumeBtn">Download Resume</a></p>
+        <!-- Spotify card (inline) -->
+        <div class="spotify-card reveal" id="spotifyCard" hidden>
+          <div class="sp-art"><img alt="" id="spArt"><div class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i></div></div>
+          <div class="sp-meta">
+            <span class="sp-status" id="spStatus"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24zm5.5 17.3a.75.75 0 0 1-1 .25c-2.85-1.74-6.43-2.13-10.65-1.17a.75.75 0 1 1-.33-1.46c4.62-1.05 8.58-.6 11.73 1.33.36.22.47.69.25 1.05zm1.47-3.27a.94.94 0 0 1-1.29.31c-3.26-2-8.23-2.59-12.09-1.42a.94.94 0 1 1-.54-1.8c4.4-1.33 9.88-.68 13.6 1.6.44.27.58.85.32 1.3zm.13-3.4C15.2 8.3 8.75 8.08 5.02 9.21a1.13 1.13 0 1 1-.66-2.16c4.28-1.3 11.4-1.05 15.9 1.62a1.13 1.13 0 0 1-1.16 1.95z"/></svg> <span id="spStatusText">Now playing</span></span>
+            <a class="sp-title" id="spTitle" target="_blank" rel="noopener"></a>
+            <span class="sp-artist" id="spArtist"></span>
+            <div class="sp-progress"><div class="sp-bar" id="spBar"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Resume / Experience -->
+  <section id="resume-section" class="section">
+    <div class="container">
+      <div class="heading-section center reveal">
+        <h1 class="big">Resume</h1>
+        <h2>Experience</h2>
+        <p>Where I've worked, learned, and given back.</p>
+      </div>
+      <div class="resume-grid">
+        <div class="resume-wrap reveal">
+          <span class="date">Apr 2026 – Oct 2026</span>
+          <h2>Code Sensei</h2>
+          <span class="position">Code Ninjas Powell · Part-time · Powell, OH</span>
+          <p>Supported students in learning coding and problem-solving through guided instruction and hands-on activities. Helped manage students and assisted with teaching.</p>
+          <div class="tags"><span>JavaScript</span><span>Unity</span><span>Teaching</span></div>
+        </div>
+        <div class="resume-wrap reveal">
+          <span class="date">Jun 2025</span>
+          <h2>Research Intern, Next STEPP</h2>
+          <span class="position">The Ohio State University · Columbus, OH</span>
+          <p>STEM, Technology, and Educational Pathways Program. Gained hands-on experience with research methods, 3D printing, and VR prototyping.</p>
+          <div class="tags"><span>Research</span><span>3D Printing</span><span>VR Prototyping</span></div>
+        </div>
+        <div class="resume-wrap reveal">
+          <span class="date">Jun 2025 – Present</span>
+          <h2>Leadership Intern</h2>
+          <span class="position">National Inventors Hall of Fame · Camp Invention</span>
+          <p>Support elementary campers building projects like Morse code transmitters and kaleidoscopes, and guide students through teamwork, creativity, and engineering challenges.</p>
+          <div class="tags"><span>Mentorship</span><span>STEM Education</span></div>
+        </div>
+        <div class="resume-wrap reveal">
+          <span class="date">Mar 2023 – Present</span>
+          <h2>Receptionist &amp; Math Instructor</h2>
+          <span class="position">Sri Venkateswara Temple of Central Ohio</span>
+          <p>Manage donation transactions and food sales at reception. Every Saturday, teach mathematics to elementary students, integrating logic, pattern recognition, and algorithmic thinking.</p>
+          <div class="tags"><span>Teaching</span><span>Community</span></div>
+        </div>
+      </div>
+
+      <div class="heading-section center reveal edu-head">
+        <h2>Education</h2>
+      </div>
+      <div class="resume-grid">
+        <div class="resume-wrap reveal">
+          <span class="date">Aug 2024 – May 2028</span>
+          <h2>Olentangy Berlin High School</h2>
+          <span class="position">Junior</span>
+          <p>Technology Student Association (President) · Cyber-Seniors (Vice President) · ISEF (Computer Science Captain) · Speech and Debate · Model UN · FBLA · National Honor Society</p>
+        </div>
+        <div class="resume-wrap reveal">
+          <span class="date">Dual Enrollment</span>
+          <h2>Columbus State Community College</h2>
+          <span class="position">College-level coursework</span>
+          <p>Taking college-level courses while completing high school education.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills-section" class="section">
+    <div class="container">
+      <div class="heading-section center reveal">
+        <h1 class="big">Skills</h1>
+        <h2>My Skills</h2>
+        <p>The languages, tools, and strengths I bring to a team.</p>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-card reveal">
+          <div class="skill-icon">{ }</div>
+          <h3>Languages</h3>
+          <div class="chips"><span>Java</span><span>Python</span><span>Swift</span><span>JavaScript</span></div>
+        </div>
+        <div class="skill-card reveal">
+          <div class="skill-icon">▣</div>
+          <h3>Development</h3>
+          <div class="chips"><span>Mobile App Dev</span><span>Software Development</span><span>Unity</span><span>CustomTkinter</span><span>SQLite</span><span>AI</span></div>
+        </div>
+        <div class="skill-card reveal">
+          <div class="skill-icon">⛨</div>
+          <h3>Security &amp; Systems</h3>
+          <div class="chips"><span>Cybersecurity</span><span>ICS Security</span><span>Secure Systems Configuration</span></div>
+        </div>
+        <div class="skill-card reveal">
+          <div class="skill-icon">✦</div>
+          <h3>Research &amp; Making</h3>
+          <div class="chips"><span>Research Methods</span><span>3D Printing</span><span>VR Prototyping</span></div>
+        </div>
+        <div class="skill-card reveal">
+          <div class="skill-icon">◎</div>
+          <h3>Leadership</h3>
+          <div class="chips"><span>Communication</span><span>Mentorship</span><span>Public Speaking</span><span>Teaching</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects-section" class="section">
+    <div class="container">
+      <div class="heading-section center reveal">
+        <h1 class="big">Projects</h1>
+        <h2>My Projects</h2>
+        <p>Things I've designed and built.</p>
+      </div>
+      <div class="projects-grid">
+        <article class="project reveal" style="--p-img: url('../assets/triply.svg')">
+          <div class="overlay"></div>
+          <div class="text">
+            <span class="date">Sep 2026 – Present</span>
+            <h3>Triply</h3>
+            <p>A mobile app that makes group trip planning simple. Shared itineraries, group chat, scheduling, and expense splitting, all in one place.</p>
+            <div class="tags"><span>Swift</span><span>Mobile</span><span>AI</span></div>
+          </div>
+        </article>
+        <article class="project reveal" style="--p-img: url('../assets/townsquare.svg')">
+          <div class="overlay"></div>
+          <div class="text">
+            <span class="date">Sep 2025 – Feb 2026</span>
+            <h3>TownSquare</h3>
+            <p>Python desktop app built with CustomTkinter and SQLite to help users discover and support local small businesses. Qualified for the 2026 FBLA National Leadership Conference in Coding &amp; Programming.</p>
+            <div class="tags"><span>Python</span><span>CustomTkinter</span><span>SQLite</span></div>
+            <a class="project-link" href="https://github.com/harswith/TownSquare" target="_blank" rel="noopener">View on GitHub →</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Awards & certs (counter band, Clark-style) -->
+  <section id="awards-section" class="section band">
+    <div class="container">
+      <div class="heading-section center reveal">
+        <h1 class="big">Honors</h1>
+        <h2>Awards &amp; Certifications</h2>
+      </div>
+      <div class="awards-grid">
+        <div class="award reveal">
+          <span class="award-badge">🏆</span>
+          <h3>FBLA Coding &amp; Programming</h3>
+          <p>National Leadership Conference Qualifier · Future Business Leaders of America · Feb 2026</p>
+        </div>
+        <div class="award reveal">
+          <span class="award-badge">⛨</span>
+          <h3>ICS Cybersecurity Practices (FY24)</h3>
+          <p>CISA · U.S. Department of Homeland Security · Dec 2025</p>
+        </div>
+        <div class="award reveal">
+          <span class="award-badge">☕</span>
+          <h3>Java Certificate of Accomplishment</h3>
+          <p>HackerRank · Dec 2025</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hire / CTA band -->
+  <section class="hire reveal">
+    <div class="container center">
+      <h2>I'm <span>open</span> to internships &amp; research opportunities</h2>
+      <p>Always excited to learn from real-world development teams.</p>
+      <a href="#contact-section" class="btn btn-primary">Let's talk</a>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact-section" class="section">
+    <div class="container">
+      <div class="heading-section center reveal">
+        <h1 class="big">Contact</h1>
+        <h2>Contact Me</h2>
+        <p>Have an opportunity or just want to say hi? Reach out.</p>
+      </div>
+      <div class="contact-grid">
+        <a class="contact-box reveal" href="https://www.linkedin.com/in/harswith-buchireddy" target="_blank" rel="noopener">
+          <div class="icon"><svg viewBox="0 0 24 24" width="26" height="26"><path fill="currentColor" d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05C20.6 8.65 21 11.3 21 14.7V21h-4v-5.6c0-1.34-.03-3.05-1.86-3.05-1.86 0-2.14 1.45-2.14 2.95V21H9z"/></svg></div>
+          <h3>LinkedIn</h3><p>Harswith Buchireddy</p>
+        </a>
+        <a class="contact-box reveal" href="https://github.com/harswith" target="_blank" rel="noopener">
+          <div class="icon"><svg viewBox="0 0 24 24" width="26" height="26"><path fill="currentColor" d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.26.8-.58v-2c-3.34.73-4.04-1.6-4.04-1.6-.55-1.4-1.34-1.77-1.34-1.77-1.09-.75.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.49 1 .1-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.66 1.66.24 2.88.12 3.18.77.84 1.23 1.9 1.23 3.22 0 4.61-2.8 5.62-5.48 5.92.43.37.82 1.1.82 2.22v3.29c0 .32.21.7.82.58A12 12 0 0 0 12 .5z"/></svg></div>
+          <h3>GitHub</h3><p>github.com/harswith</p>
+        </a>
+        <a class="contact-box reveal" href="mailto:hello@harswith.com">
+          <div class="icon"><svg viewBox="0 0 24 24" width="26" height="26"><path fill="currentColor" d="M2 5h20v14H2zm2 2v.5l8 5 8-5V7zm16 2.8-8 5-8-5V17h16z"/></svg></div>
+          <h3>Email</h3><p>hello@harswith.com</p>
+        </a>
+        <a class="contact-box reveal" href="https://harswith.com">
+          <div class="icon"><svg viewBox="0 0 24 24" width="26" height="26"><path fill="currentColor" d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm6.9 6h-2.95a15.7 15.7 0 0 0-1.38-3.56A8.03 8.03 0 0 1 18.9 8zM12 4.04c.83 1.2 1.48 2.53 1.91 3.96h-3.82A13.8 13.8 0 0 1 12 4.04zM4.26 14a8.2 8.2 0 0 1 0-4h3.38a16.5 16.5 0 0 0 0 4zm.84 2h2.95c.32 1.25.78 2.45 1.38 3.56A8 8 0 0 1 5.1 16zm2.95-8H5.1a8 8 0 0 1 4.33-3.56A15.7 15.7 0 0 0 8.05 8zM12 19.96A14.1 14.1 0 0 1 10.09 16h3.82A14.1 14.1 0 0 1 12 19.96zM14.34 14H9.66a14.7 14.7 0 0 1 0-4h4.68a14.7 14.7 0 0 1 0 4zm.25 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95a8.03 8.03 0 0 1-4.33 3.56zM16.36 14a16.5 16.5 0 0 0 0-4h3.38a8.2 8.2 0 0 1 0 4z"/></svg></div>
+          <h3>Website</h3><p>harswith.com</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container center">
+      <p>&copy; <span id="year"></span> Harswith Buchireddy · Built with curiosity in Ohio</p>
+    </div>
+  </footer>
+
+  <!-- Floating Spotify mini-player -->
+  <a class="spotify-float" id="spotifyFloat" target="_blank" rel="noopener" hidden>
+    <img alt="" id="spfArt">
+    <span class="eq" aria-hidden="true"><i></i><i></i><i></i></span>
+    <span class="spf-text"><b id="spfTitle"></b><small id="spfArtist"></small></span>
+  </a>
+
+  <a href="#home-section" class="to-top" id="toTop" aria-label="Back to top">↑</a>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
