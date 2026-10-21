@@ -125,11 +125,6 @@
     }, { passive: true });
   }
 
-  // Hide the resume button until a resume PDF is added to the site root
-  const resumeBtn = $('#resumeBtn');
-  fetch(resumeBtn.getAttribute('href'), { method: 'HEAD' })
-    .then(r => { if (!r.ok || !(r.headers.get('content-type') || '').includes('pdf')) resumeBtn.remove(); })
-    .catch(() => resumeBtn.remove());
 
   // Spotify now playing (served by /api/now-playing on Vercel)
   const card = $('#spotifyCard');

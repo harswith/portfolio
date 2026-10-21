@@ -14,7 +14,7 @@ assets/                 favicon, placeholder profile image, project art
 ## Things to fill in
 
 - **Photo:** replace `assets/profile.svg` with your photo (e.g. `assets/profile.jpg`) and update the `<img>` in the About section.
-- **Resume:** drop `Harswith_Buchireddy_Resume.pdf` in the root. The Download Resume button hides itself until the file exists.
+- **Resume:** `Harswith_Buchireddy_Resume.pdf` in the root powers both Download Resume buttons. Replace that file to update it.
 - **LinkedIn URL:** the Contact section uses `linkedin.com/in/harswith-buchireddy`; change it if yours differs.
 - **Email:** the Contact section uses `hello@harswith.com`. Swap in a real address (or set up email forwarding for the domain).
 
