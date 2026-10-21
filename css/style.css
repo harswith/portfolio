@@ -265,6 +265,9 @@ img { max-width: 100%; display: block; }
 .to-top:hover { color: #fff; box-shadow: 0 0 20px var(--red-glow); }
 
 /* Spotify */
+.ps-note { margin-top: 36px; max-width: 440px; font-size: 14px; font-style: italic; color: #c9c9d2; }
+.ps-note span { font-family: "JetBrains Mono", monospace; font-style: normal; font-weight: 600; color: var(--red); margin-right: 4px; }
+.ps-note + .spotify-card { margin-top: 12px; }
 .spotify-card {
   display: flex; gap: 16px; align-items: center; margin-top: 30px; padding: 14px; max-width: 440px;
   border-radius: var(--radius); background: var(--bg-2); border: 1px solid var(--line);
