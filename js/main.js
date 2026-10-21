@@ -117,6 +117,8 @@
   const render = () => {
     if (!track) return;
     const playing = track.isPlaying;
+    card.classList.remove('placeholder');
+    $('#spArt').hidden = false;
     $('#spArt').src = $('#spfArt').src = track.albumImageUrl;
     $('#spTitle').textContent = $('#spfTitle').textContent = track.title;
     $('#spTitle').href = float.href = track.songUrl;
@@ -127,7 +129,6 @@
     float.classList.toggle('paused', !playing);
     $('.sp-progress', card).style.display = playing && track.duration ? '' : 'none';
     tick();
-    card.hidden = false;
     float.hidden = false;
     requestAnimationFrame(() => float.classList.add('show'));
   };

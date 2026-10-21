@@ -272,10 +272,15 @@ img { max-width: 100%; display: block; }
 .spotify-card[hidden], .spotify-float[hidden] { display: none; }
 .sp-art { position: relative; width: 72px; height: 72px; flex: none; border-radius: 10px; overflow: hidden; background: var(--bg-3); }
 .sp-art img { width: 100%; height: 100%; object-fit: cover; }
+.sp-art-ph { position: absolute; inset: 0; display: grid; place-items: center; font-size: 30px; color: var(--red); background: radial-gradient(circle at 30% 30%, rgba(255, 46, 77, .25), var(--bg-3) 70%); }
+.spotify-card:not(.placeholder) .sp-art-ph { display: none; }
+.spotify-card.placeholder .sp-progress { display: none; }
 .sp-art .eq { position: absolute; right: 6px; bottom: 6px; }
 .sp-meta { min-width: 0; flex: 1; display: flex; flex-direction: column; }
 .sp-status { display: inline-flex; align-items: center; gap: 6px; color: #1ed760; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; }
 .sp-status.idle { color: var(--muted); }
+.placeholder .sp-status { color: var(--muted); }
+.placeholder .sp-title { pointer-events: none; }
 .sp-title { color: #fff; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .sp-title:hover { color: var(--red); }
 .sp-artist { font-size: 13px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
@@ -333,6 +338,7 @@ img { max-width: 100%; display: block; }
   .skills-grid { grid-template-columns: 1fr; }
   .about-info li { flex-direction: column; gap: 0; }
   .spotify-float { max-width: calc(100vw - 90px); }
+  .brand { font-size: 18px; }
 }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; }
