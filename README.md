@@ -29,18 +29,15 @@ python3 -m http.server 8000
 ## Spotify "now playing" setup (one time, ~10 minutes)
 
 1. Go to https://developer.spotify.com/dashboard, log in, and **Create app**.
-   - Redirect URI: `http://127.0.0.1:8888/callback`
+   - Redirect URIs (add both): `https://harswith.com/api/spotify-callback` and `https://www.harswith.com/api/spotify-callback`
    - API: Web API
-2. Copy the app's **Client ID** and **Client Secret**.
-3. Get a refresh token:
-   ```
-   SPOTIFY_CLIENT_ID=xxx SPOTIFY_CLIENT_SECRET=yyy npm run spotify-token
-   ```
-   Open the URL it prints, approve, and copy the `SPOTIFY_REFRESH_TOKEN=...` line from the terminal.
-4. In Vercel: Project → Settings → Environment Variables, add
-   `SPOTIFY_CLIENT_ID`, `SPOTIFY_CLIENT_SECRET`, `SPOTIFY_REFRESH_TOKEN`, then redeploy.
+2. In Vercel → Settings → Environment Variables, add `SPOTIFY_CLIENT_ID` and `SPOTIFY_CLIENT_SECRET` from the app's settings, then redeploy.
+3. Visit https://harswith.com/api/spotify-login, approve, and copy the token it shows.
+4. Add it in Vercel as `SPOTIFY_REFRESH_TOKEN`, then redeploy. The setup routes switch themselves off.
 
-Never commit these values. The widget shows what you're playing (with an equalizer and progress bar), falls back to your last played track, and stays hidden if the API isn't configured.
+Never commit these values. The About card shows a "Coming soon" placeholder until this works, then shows what you're playing (or your last played track), and a floating mini-player appears.
+
+(Offline alternative: add `http://127.0.0.1:8888/callback` as a redirect URI and run `SPOTIFY_CLIENT_ID=... SPOTIFY_CLIENT_SECRET=... npm run spotify-token`.)
 
 ## Deploy on Vercel + connect harswith.com
 
