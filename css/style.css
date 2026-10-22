@@ -304,7 +304,7 @@ img { max-width: 100%; display: block; }
   display: flex; gap: 16px; align-items: center; margin-top: 30px; padding: 14px; max-width: 440px;
   border-radius: var(--radius); background: var(--bg-2); border: 1px solid var(--line);
 }
-.spotify-card[hidden], .spotify-float[hidden] { display: none; }
+.spotify-card[hidden] { display: none; }
 .sp-art { position: relative; width: 72px; height: 72px; flex: none; border-radius: 10px; overflow: hidden; background: var(--bg-3); }
 .sp-art img { width: 100%; height: 100%; object-fit: cover; }
 .sp-art-ph { position: absolute; inset: 0; display: grid; place-items: center; font-size: 30px; color: var(--red); background: radial-gradient(circle at 30% 30%, rgba(var(--accent-rgb), .25), var(--bg-3) 70%); }
@@ -327,19 +327,6 @@ img { max-width: 100%; display: block; }
 @keyframes eq { 0%, 100% { height: 3px; } 50% { height: 14px; } }
 .paused .eq i { animation: none; height: 3px; }
 
-.spotify-float {
-  position: fixed; left: 20px; bottom: 20px; z-index: 40; display: flex; align-items: center; gap: 10px;
-  padding: 6px 16px 6px 6px; max-width: 300px; border-radius: 40px; color: var(--text);
-  background: rgba(var(--bg2-rgb), .85); backdrop-filter: blur(10px); border: 1px solid var(--line);
-  transform: translateY(120%); transition: transform .5s var(--ease), border-color .3s;
-}
-.spotify-float.show { transform: none; }
-.spotify-float:hover { border-color: var(--red); color: var(--text); }
-.spotify-float img { width: 36px; height: 36px; border-radius: 50%; animation: spin 8s linear infinite; }
-.spotify-float.paused img { animation-play-state: paused; }
-.spf-text { display: flex; flex-direction: column; min-width: 0; line-height: 1.3; }
-.spf-text b { color: var(--heading); font-size: 13px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.spf-text small { font-size: 11px; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
 /* Responsive */
 @media (max-width: 991px) {
@@ -372,7 +359,6 @@ img { max-width: 100%; display: block; }
   .contact-grid { grid-template-columns: 1fr; }
   .skills-grid { grid-template-columns: 1fr; }
   .about-info li { flex-direction: column; gap: 0; }
-  .spotify-float { max-width: calc(100vw - 90px); }
   .brand { font-size: 18px; }
 }
 @media (prefers-reduced-motion: reduce) {

@@ -128,16 +128,8 @@
 
   // Spotify now playing (served by /api/now-playing on Vercel)
   const card = $('#spotifyCard');
-  const float = $('#spotifyFloat');
   let track = null;
   let fetchedAt = 0;
-  let lastPopped = null;
-  let popTimer;
-  let cardInView = false;
-  new IntersectionObserver(([e]) => {
-    cardInView = e.isIntersecting;
-    if (cardInView) float.classList.remove('show');
-  }).observe(card);
 
   const fmtAgo = iso => {
     const mins = Math.round((Date.now() - new Date(iso)) / 60000);
@@ -151,26 +143,15 @@
     const playing = track.isPlaying;
     card.classList.remove('placeholder');
     $('#spArt').hidden = false;
-    $('#spArt').src = $('#spfArt').src = track.albumImageUrl;
-    $('#spTitle').textContent = $('#spfTitle').textContent = track.title;
-    $('#spTitle').href = float.href = track.songUrl;
-    $('#spArtist').textContent = $('#spfArtist').textContent = track.artist;
+    $('#spArt').src = track.albumImageUrl;
+    $('#spTitle').textContent = track.title;
+    $('#spTitle').href = track.songUrl;
+    $('#spArtist').textContent = track.artist;
     $('#spStatusText').textContent = playing ? 'Now playing' : (track.playedAt ? `Last played · ${fmtAgo(track.playedAt)}` : 'Last played');
     $('#spStatus').classList.toggle('idle', !playing);
     card.classList.toggle('paused', !playing);
-    float.classList.toggle('paused', !playing);
     $('.sp-progress', card).style.display = playing && track.duration ? '' : 'none';
     tick();
-    float.hidden = false;
-    // Corner pill only pops up for a few seconds when a new song starts playing
-    if (playing && track.songUrl !== lastPopped && !cardInView) {
-      lastPopped = track.songUrl;
-      clearTimeout(popTimer);
-      requestAnimationFrame(() => float.classList.add('show'));
-      popTimer = setTimeout(() => float.classList.remove('show'), 6000);
-    } else if (!playing) {
-      float.classList.remove('show');
-    }
   };
 
   const tick = () => {
