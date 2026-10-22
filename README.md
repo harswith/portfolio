@@ -16,7 +16,7 @@ assets/                 favicon, placeholder profile image, project art
 - **Photo:** replace `assets/profile.svg` with your photo (e.g. `assets/profile.jpg`) and update the `<img>` in the About section.
 - **Resume:** `Harswith_Buchireddy_Resume.pdf` in the root powers both Download Resume buttons. Replace that file to update it.
 - **LinkedIn URL:** the Contact section uses `linkedin.com/in/harswith-buchireddy`; change it if yours differs.
-- **Email:** the Contact section uses `hello@harswith.com`. Swap in a real address (or set up email forwarding for the domain).
+- **Email:** the Contact section uses `harswith28@gmail.com`.
 
 ## Run locally
 
@@ -35,7 +35,7 @@ python3 -m http.server 8000
 3. Visit https://harswith.com/api/spotify-login, approve, and copy the token it shows.
 4. Add it in Vercel as `SPOTIFY_REFRESH_TOKEN`, then redeploy. The setup routes switch themselves off.
 
-Never commit these values. The About card shows a "Coming soon" placeholder until this works, then shows what you're playing (or your last played track), and a floating mini-player appears.
+Never commit these values. The About card shows a "Coming soon" placeholder until this works, then shows what you're playing (or your last played track). A small corner pill pops up for 6 seconds when a new song starts, unless the About card is already on screen.
 
 (Offline alternative: add `http://127.0.0.1:8888/callback` as a redirect URI and run `SPOTIFY_CLIENT_ID=... SPOTIFY_CLIENT_SECRET=... npm run spotify-token`.)
 

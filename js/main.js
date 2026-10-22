@@ -131,6 +131,13 @@
   const float = $('#spotifyFloat');
   let track = null;
   let fetchedAt = 0;
+  let lastPopped = null;
+  let popTimer;
+  let cardInView = false;
+  new IntersectionObserver(([e]) => {
+    cardInView = e.isIntersecting;
+    if (cardInView) float.classList.remove('show');
+  }).observe(card);
 
   const fmtAgo = iso => {
     const mins = Math.round((Date.now() - new Date(iso)) / 60000);
@@ -155,7 +162,15 @@
     $('.sp-progress', card).style.display = playing && track.duration ? '' : 'none';
     tick();
     float.hidden = false;
-    requestAnimationFrame(() => float.classList.add('show'));
+    // Corner pill only pops up for a few seconds when a new song starts playing
+    if (playing && track.songUrl !== lastPopped && !cardInView) {
+      lastPopped = track.songUrl;
+      clearTimeout(popTimer);
+      requestAnimationFrame(() => float.classList.add('show'));
+      popTimer = setTimeout(() => float.classList.remove('show'), 6000);
+    } else if (!playing) {
+      float.classList.remove('show');
+    }
   };
 
   const tick = () => {
